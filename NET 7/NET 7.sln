@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{E9165299-D635-46E8-89BD-27CE2E9FD67A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{62523831-F9EA-4A03-BC5F-F7D109FDFE6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.Test", "TektonLabs.Test\TektonLabs.Test.csproj", "{5CAA1F43-0BFA-4095-B94E-F26145DF2B33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.Tools", "TektonLabs.Tools\TektonLabs.Tools.csproj", "{31CBDC2D-366D-4F71-BFA7-12497E44D85B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.API", "TektonLabs.API\TektonLabs.API.csproj", "{A5ECC596-B82F-415C-B02B-6CBDEEDE6D1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.Core", "TektonLabs.Business\TektonLabs.Core.csproj", "{DFC5730D-6DDB-470F-93CF-A7859F58ABB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.Infrastracture", "TektonLabs.Infrastracture\TektonLabs.Infrastracture.csproj", "{998664A6-3958-4718-AB2F-53D7AFC5A648}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CAA1F43-0BFA-4095-B94E-F26145DF2B33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CAA1F43-0BFA-4095-B94E-F26145DF2B33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CAA1F43-0BFA-4095-B94E-F26145DF2B33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CAA1F43-0BFA-4095-B94E-F26145DF2B33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CBDC2D-366D-4F71-BFA7-12497E44D85B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CBDC2D-366D-4F71-BFA7-12497E44D85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CBDC2D-366D-4F71-BFA7-12497E44D85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CBDC2D-366D-4F71-BFA7-12497E44D85B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5ECC596-B82F-415C-B02B-6CBDEEDE6D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5ECC596-B82F-415C-B02B-6CBDEEDE6D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5ECC596-B82F-415C-B02B-6CBDEEDE6D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5ECC596-B82F-415C-B02B-6CBDEEDE6D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFC5730D-6DDB-470F-93CF-A7859F58ABB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC5730D-6DDB-470F-93CF-A7859F58ABB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC5730D-6DDB-470F-93CF-A7859F58ABB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC5730D-6DDB-470F-93CF-A7859F58ABB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{998664A6-3958-4718-AB2F-53D7AFC5A648}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998664A6-3958-4718-AB2F-53D7AFC5A648}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998664A6-3958-4718-AB2F-53D7AFC5A648}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998664A6-3958-4718-AB2F-53D7AFC5A648}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5CAA1F43-0BFA-4095-B94E-F26145DF2B33} = {62523831-F9EA-4A03-BC5F-F7D109FDFE6A}
+		{31CBDC2D-366D-4F71-BFA7-12497E44D85B} = {E9165299-D635-46E8-89BD-27CE2E9FD67A}
+		{A5ECC596-B82F-415C-B02B-6CBDEEDE6D1B} = {62523831-F9EA-4A03-BC5F-F7D109FDFE6A}
+		{DFC5730D-6DDB-470F-93CF-A7859F58ABB2} = {62523831-F9EA-4A03-BC5F-F7D109FDFE6A}
+		{998664A6-3958-4718-AB2F-53D7AFC5A648} = {62523831-F9EA-4A03-BC5F-F7D109FDFE6A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0937633F-29BB-4336-A5D5-F43EE1FFF81B}
+	EndGlobalSection
+EndGlobal
