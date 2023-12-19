@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TektonLabs.Infrastracture.Data;
+namespace TektonLabs.Core.Entities;
 
 public partial class Product
 {

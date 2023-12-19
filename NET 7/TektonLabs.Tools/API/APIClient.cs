@@ -8,7 +8,7 @@ namespace TektonLabs.Tools.API
 {
     public class APIClient
     {
-        private HttpClient httpClient;
+        private readonly HttpClient httpClient;
         public APIClient(HttpClient httpClient)
         {
             this.httpClient = httpClient;

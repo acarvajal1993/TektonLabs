@@ -7,12 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TektonLabs.Business\TektonLabs.Core.csproj" />
+    <ProjectReference Include="..\TektonLabs.Services\TektonLabs.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Repositories\" />
-    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>

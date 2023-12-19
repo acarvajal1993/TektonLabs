@@ -7,15 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{E9165299-D63
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{62523831-F9EA-4A03-BC5F-F7D109FDFE6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.Test", "TektonLabs.Test\TektonLabs.Test.csproj", "{5CAA1F43-0BFA-4095-B94E-F26145DF2B33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Test", "TektonLabs.Test\TektonLabs.Test.csproj", "{5CAA1F43-0BFA-4095-B94E-F26145DF2B33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.Tools", "TektonLabs.Tools\TektonLabs.Tools.csproj", "{31CBDC2D-366D-4F71-BFA7-12497E44D85B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Tools", "TektonLabs.Tools\TektonLabs.Tools.csproj", "{31CBDC2D-366D-4F71-BFA7-12497E44D85B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.API", "TektonLabs.API\TektonLabs.API.csproj", "{A5ECC596-B82F-415C-B02B-6CBDEEDE6D1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.API", "TektonLabs.API\TektonLabs.API.csproj", "{A5ECC596-B82F-415C-B02B-6CBDEEDE6D1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.Core", "TektonLabs.Business\TektonLabs.Core.csproj", "{DFC5730D-6DDB-470F-93CF-A7859F58ABB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Core", "TektonLabs.Business\TektonLabs.Core.csproj", "{DFC5730D-6DDB-470F-93CF-A7859F58ABB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.Infrastracture", "TektonLabs.Infrastracture\TektonLabs.Infrastracture.csproj", "{998664A6-3958-4718-AB2F-53D7AFC5A648}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TektonLabs.Infrastracture", "TektonLabs.Infrastracture\TektonLabs.Infrastracture.csproj", "{998664A6-3958-4718-AB2F-53D7AFC5A648}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TektonLabs.Services", "TektonLabs.Services\TektonLabs.Services.csproj", "{4F667AE5-30D1-41A1-8291-DF512DC020FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{998664A6-3958-4718-AB2F-53D7AFC5A648}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{998664A6-3958-4718-AB2F-53D7AFC5A648}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{998664A6-3958-4718-AB2F-53D7AFC5A648}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F667AE5-30D1-41A1-8291-DF512DC020FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F667AE5-30D1-41A1-8291-DF512DC020FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F667AE5-30D1-41A1-8291-DF512DC020FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F667AE5-30D1-41A1-8291-DF512DC020FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{A5ECC596-B82F-415C-B02B-6CBDEEDE6D1B} = {62523831-F9EA-4A03-BC5F-F7D109FDFE6A}
 		{DFC5730D-6DDB-470F-93CF-A7859F58ABB2} = {62523831-F9EA-4A03-BC5F-F7D109FDFE6A}
 		{998664A6-3958-4718-AB2F-53D7AFC5A648} = {62523831-F9EA-4A03-BC5F-F7D109FDFE6A}
+		{4F667AE5-30D1-41A1-8291-DF512DC020FB} = {E9165299-D635-46E8-89BD-27CE2E9FD67A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0937633F-29BB-4336-A5D5-F43EE1FFF81B}
