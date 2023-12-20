@@ -9,6 +9,10 @@ namespace TektonLabs.Core.Business.Productos.ObtenerProducto
 {
     public class GetProductResponse : Result
     {
+        public GetProductResponse()
+        {
+                
+        }
         public int ProductId { get; set; }
         public string Name { get; set; }
         public string Status { get; set; }

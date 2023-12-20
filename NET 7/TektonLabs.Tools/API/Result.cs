@@ -18,6 +18,7 @@ namespace TektonLabs.Tools.HTTPResponse
         public const int NOT_FOUND = 404;
         public const int INTERNAL_SERVER_ERROR = 500;
         public const int UNPROCESSABLE_ENTITY = 422;
+        public const int UNAUTHORIZED = 401;
         public Result()
         {
             Code = 200;

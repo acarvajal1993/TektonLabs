@@ -4,6 +4,10 @@ using TektonLabs.Infrastracture;
 var builder = WebApplication.CreateBuilder(args);
 var Configuration = builder.Configuration;
 
+builder.Services.AddControllers().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddHttpClient();
 // Add services to the container.
 
 builder.Services.AddControllers();

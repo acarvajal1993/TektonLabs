@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TektonLabs.Business\TektonLabs.Core.csproj" />
+  </ItemGroup>
+
 </Project>

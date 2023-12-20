@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TektonLabs.Infrastracture.Data;
+using TektonLabs.Infrastracture.Repositories.Interfaces;
+using TektonLabs.Infrastracture.Repositories;
 using TektonLabs.Services.Mocks.Mockapi;
+
 
 namespace TektonLabs.Infrastracture
 {
@@ -17,8 +20,13 @@ namespace TektonLabs.Infrastracture
         {
             services.AddDbContext<TektonLabsContext>(options => options.UseSqlServer(configuration.GetConnectionString("TektonLabsEntities")));
 
-            //Servicios externos
-            services.AddTransient<IMockapiClient, MockapiClient>();
+            //External services
+            services.AddScoped<IMockapiClient, MockapiClient>();
+
+
+            //Repositories
+            services.AddScoped<IBaseRepository, BaseRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
 
             return services;
         }

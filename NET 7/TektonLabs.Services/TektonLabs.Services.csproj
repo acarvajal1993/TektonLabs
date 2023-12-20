@@ -10,4 +10,8 @@
     <ProjectReference Include="..\TektonLabs.Tools\TektonLabs.Tools.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Mocks\Mockapi\Requests\" />
+  </ItemGroup>
+
 </Project>
