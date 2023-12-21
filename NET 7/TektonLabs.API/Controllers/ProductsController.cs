@@ -102,20 +102,26 @@ namespace TektonLabs.API.Controllers
             var product = await productRepository.GetProductById(productId);
             APIResponse response = await mockapiClient.GetProduct(configuration["URLMockapi"], productId.ToString());
 
-            int productStatus = product.Status ? 1 : 0;
+            if (product != null)
+            {
+                int productStatus = product.Status ? 1 : 0;
 
-            var statusName = productCacheService.GetProductState()[productStatus];
+                var statusName = productCacheService.GetProductState()[productStatus];
 
-            var jResponse = JsonConvert.DeserializeObject<MockapiGetDiscountResponse>(response.Body);
+                var jResponse = JsonConvert.DeserializeObject<MockapiGetDiscountResponse>(response.Body);
 
-            //Logging
-            stopwatch.Stop();
-            var responseTime = stopwatch.ElapsedMilliseconds;
+                //Logging
+                stopwatch.Stop();
+                var responseTime = stopwatch.ElapsedMilliseconds;
 
-            logger.LogInformation($"Response time of GetById request: {responseTime} ms");
+                logger.LogInformation($"Response time of GetById request: {responseTime} ms");
 
-            //Response
-            return ResultResponse(new GetProductResponse(jResponse.Discount, statusName, product));
+                //Response
+                return ResultResponse(new GetProductResponse(jResponse.Discount, statusName, product));
+            }
+            else
+                return ResultResponse(new Result { Code = Result.NOT_FOUND, Type = "product_not_found", Message = "The product was not found." });
+    
         }
     }
 }

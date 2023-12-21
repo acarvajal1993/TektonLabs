@@ -34,9 +34,17 @@ Principalmente se usa la inversión de dependencias a través de la inyección d
 3) Una vez que se abra el navegador, cambiar la url http://localhost:5265/swagger/index.html por http://localhost:5265/api.tektonlabs.com/products
 
 
+=========================Para ver los logs=======================================
+
+Ir a la ruta NET 7\TektonLabs.API\logs. En esta ruta, se generá un archivo texto plano al hacer el primer request. Cabe destacar
+que se está usando Serilog como herramienta para lograr el objetivo.
+
+
 =========================Sobre la documentación del API con Swagger=================
 
 La documentación fue hecha en el editor de https://editor.swagger.io/, esto generó un archivo .yaml. Entonces,
 para ver la documentación, lo que hay que hacer es ir a la web especificada anteriormente e importar el archivo "openapi.yaml", en cual se encuentra en
 la siguiente ruta: NET 7\TektonLabs.API.
+
+
 
