@@ -10,6 +10,7 @@ using TektonLabs.Infrastracture.Data;
 using TektonLabs.Infrastracture.Repositories.Interfaces;
 using TektonLabs.Infrastracture.Repositories;
 using TektonLabs.Services.Mocks.Mockapi;
+using TektonLabs.Infrastracture.CacheService;
 
 
 namespace TektonLabs.Infrastracture
@@ -27,6 +28,9 @@ namespace TektonLabs.Infrastracture
             //Repositories
             services.AddScoped<IBaseRepository, BaseRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+
+            //Services
+            services.AddScoped<IProductCacheService, ProductCacheService>();
 
             return services;
         }

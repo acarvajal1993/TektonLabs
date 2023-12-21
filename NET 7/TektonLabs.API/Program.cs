@@ -1,4 +1,6 @@
 using Microsoft.Extensions.Configuration;
+using Microsoft.OpenApi.Models;
+using Serilog;
 using TektonLabs.Infrastracture;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +17,28 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Configuring memory cache
+builder.Services.AddMemoryCache();
+
 builder.Services.AddInfrastructure(Configuration);
+
+//Logging configuration
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File("logs/request-log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Services.AddLogging(loggingBuilder =>
+{
+    loggingBuilder.AddSerilog();
+});
+
+//API Documentation
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "TektonLabs.API", Version = "v1", Description = ".NET Senior Challenge" });
+    c.CustomSchemaIds(type => type.ToString());
+});
 
 var app = builder.Build();
 

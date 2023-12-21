@@ -25,7 +25,7 @@ namespace TektonLabs.Core.Business.Productos.ActualizarProducto
 
             if (result == null)
             {
-                result = ProductValidation();
+                result = RequestValidation();
 
                 if (result == null)
                 {

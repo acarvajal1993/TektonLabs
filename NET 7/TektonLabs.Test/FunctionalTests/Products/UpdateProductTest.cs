@@ -102,5 +102,28 @@ namespace TektonLabs.Test.FunctionalTests.Products
             //Assert
             Assert.Equal(result.Code, Result.BAD_REQUEST);
         }
+
+        [Fact]
+        public void UpdateProductNotFound()
+        {
+            //Arrange
+            Product product = null;
+
+            var request = new UpdateProductRequest()
+            {
+                Name = null,
+                Stock = 10,
+                Description = "Great product",
+                Price = 1200,
+                Status = false
+            };
+
+            //Act
+            var useCase = new UpdateProductUseCase(request, product);
+            var result = useCase.Execute();
+
+            //Assert
+            Assert.Equal(result.Code, Result.NOT_FOUND);
+        }
     }
 }
