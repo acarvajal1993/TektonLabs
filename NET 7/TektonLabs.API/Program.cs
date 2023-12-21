@@ -23,7 +23,6 @@ builder.Services.AddMemoryCache();
 builder.Services.AddInfrastructure(Configuration);
 
 //Logging configuration
-
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File("logs/request-log.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
@@ -48,7 +47,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        // Configura la propiedad BasePath para cambiar la URL base de Swagger
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "API de Productos V1");
         c.RoutePrefix = "api.tektonlabs.com/products";
     });

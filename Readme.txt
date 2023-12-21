@@ -13,9 +13,20 @@ Se está haciendo uso de Clean Architecture, la cuál se estructura en las sigui
 -API: Es la capa frontal y es donde está creada el API Rest. En esta capa, se hacen los llamados a los repositorios de infrastracture
  y de los casos de uso de Core.
 
+-Tests: El proyecto test, no es una capa como tal, simplemente tiene las pruebas de los casos de uso como
+ negocio (funcional test) y las pruebas unitarias a las entidades (unit test). Para correr dichas pruebas,
+ simplemente hay que hacer click donde dice "View" ubicado en el menú superior del Visual Studio. Posteriormente,
+ se hace click donde dice "Test explorer" y se desplegará la ventana donde se podrán ejecutar todas las pruebas
+ existentes.
+
 =======================Versión del .NET======================================
 
 NET 7
+
+
+=======================ORM utilizado=====================================
+
+Entity Framework
 
 ========================Motor de base de datos=================================
 
