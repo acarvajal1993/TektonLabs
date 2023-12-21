@@ -30,7 +30,7 @@ namespace TektonLabs.Core.Business.Productos.ActualizarProducto
                 if (result == null)
                 {
                     product.Update(request.Name, request.Status, request.Stock, request.Description, request.Price);
-                    result = new();
+                    result = new() { Message = "The product has been updated successfully" };
                 }
             }
 

@@ -33,7 +33,7 @@ builder.Services.AddLogging(loggingBuilder =>
     loggingBuilder.AddSerilog();
 });
 
-//API Documentation
+//API information
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "TektonLabs.API", Version = "v1", Description = ".NET Senior Challenge" });
@@ -46,7 +46,12 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        // Configura la propiedad BasePath para cambiar la URL base de Swagger
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "API de Productos V1");
+        c.RoutePrefix = "api.tektonlabs.com/products";
+    });
 }
 
 app.UseHttpsRedirection();

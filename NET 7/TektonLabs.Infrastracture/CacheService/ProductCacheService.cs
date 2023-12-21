@@ -11,7 +11,6 @@ namespace TektonLabs.Infrastracture.CacheService
         }
         public Dictionary<int, string> GetProductState()
         {
-            // We try to get cache from memory
             if (!memoryCache.TryGetValue("ProductStates", out Dictionary<int, string> productStates))
             {
                 productStates = UploadProductState();

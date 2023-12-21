@@ -1,0 +1,116 @@
+openapi: 3.0.3
+info:
+  title: API de Productos
+  version: 1.0.0
+servers:
+  - url: http://api.tektonlabs.com/products
+paths:
+  /products:
+    post:
+      summary: Inserta un nuevo producto en la base de datos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Name:
+                  type: string
+                Status:
+                  type: boolean
+                Stock:
+                  type: integer
+                Description:
+                  type: string
+                Price:
+                  type: number
+      responses:
+        '201':
+          description: El producto fue registrado exitosamente
+
+  /products/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        description: ID del producto
+        schema:
+          type: integer
+    put:
+      summary: Actualiza un producto existente en la base de datos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Name:
+                  type: string
+                Status:
+                  type: boolean
+                Stock:
+                  type: integer
+                Description:
+                  type: string
+                Price:
+                  type: number
+      responses:
+        '200':
+          description: El producto fue actualizado exitosamente
+        '404':
+          description: Producto no encontrado
+
+    get:
+      summary: Obtiene un producto por el ProductId
+      responses:
+        '200':
+          description: Producto obtenido correctamente.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ProductId:
+                    type: integer
+                  Name:
+                    type: string
+                  StatuName:
+                    type: string
+                  Stock:
+                    type: integer
+                  Description:
+                    type: string
+                  Price:
+                    type: number
+                  Discount:
+                    type: number
+                  FinalPrice:
+                    type: number
+        '404':
+          description: Producto no encontrado
+          
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        ProductId:
+          type: integer
+        Name:
+          type: string
+        Status:
+          type: boolean
+        Stock:
+          type: integer
+        Description:
+          type: string
+        Price:
+          type: number
+        Discount:
+          type: number
+        FinalPrice:
+          type: number
+      description: >
+        El esquema `Product` registra toda la información relacionada a un producto.

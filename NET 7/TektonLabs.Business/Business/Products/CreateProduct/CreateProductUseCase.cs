@@ -25,7 +25,7 @@ namespace TektonLabs.Core.Business.Productos.CrearProducto
             if (result == null)
             {
                 CreateProduct();
-                result = new Result();
+                result = new() { Message = "The product has been created successfully" };
             }
 
             return result;
